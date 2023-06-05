@@ -14,12 +14,4 @@ function getIP() {
     else if (aBlock == 192 && bBlock == 168) getIP() //reroll;
     else return aBlock+'.'+bBlock+'.'+cBlock+'.'+dBlock; //return result
 }
-function outputIP() { 
-    const reserved = '127.0.0.1' || '172.12.0.0'; 
-    let out = getIP()
-    if (out == reserved) {
-        outputIP();
-    }
-    return out;
-}
-console.log(outputIP())
+console.log(getIP())
